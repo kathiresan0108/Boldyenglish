@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero {
+    min-height: 100vh;
+    padding: 5rem 1rem 8rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    isolation: isolate;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(239, 246, 255, 0.8) 0%, rgba(245, 243, 255, 0.8) 100%);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #1E3A8A;
+    margin-bottom: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #4B5563;
+    margin-bottom: 2rem;
+    animation: fade-in 0.5s ease-out forwards;
+  }
+  
+  /* Conversation Container */
+  .conversation {
+    max-width: 68rem;
+    margin: 0 auto 4rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); */
+  }
+  
+  .conversation-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 350px;
+  }
+  
+  /* Character Styles */
+  .character {
+    width: 33.333%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-image {
+    width: 18rem;
+    height: 18rem;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); */
+    animation: character-enter 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    transition: transform 0.3s ease;
+  }
+  
+  .character-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .character-shadow {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12rem;
+    height: 2.5rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    border-radius: 50%;
+    filter: blur(10px);
+  }
+  
+  /* Message Styles */
+  .message {
+    width: 66.666%;
+  }
+  
+  .message-bubble {
+    background: #EFF6FF;
+    border-radius: 1.5rem;
+    padding: 1.8rem;
+    transform-origin: center;
+    animation: message-pop-up 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    /* box-shadow: 0 5px 15px rgba(59, 130, 246, 0.1); */
+  }
+  
+  .message-bubble.friend2 {
+    background: #F3E8FF;
+    /* box-shadow: 0 5px 15px rgba(139, 92, 246, 0.1); */
+  }
+  
+  .message-text {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  
+  /* Features Grid */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 68rem;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    padding: 2rem;
+    /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    /* box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); */
+  }
+  
+  .feature-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.2rem;
+    animation: bounce 2s infinite;
+  }
+  
+  .feature-icon.blue {
+    color: #3B82F6;
+  }
+  
+  .feature-icon.purple {
+    color: #8B5CF6;
+  }
+  
+  .feature-icon.yellow {
+    color: #F59E0B;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+  
+  .feature-text {
+    color: #4B5563;
+    font-size: 1.1rem;
+  }
+  
+  /* CTA Button */
+  .cta-container {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .cta-button {
+    background: #2563EB;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.2rem 2.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  }
+  
+  .cta-button:hover {
+    background: #1D4ED8;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.5);
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes character-enter {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @keyframes message-pop-up {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(0.98);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+    
+    .conversation-inner {
+      flex-direction: column;
+      min-height: auto;
+    }
+    
+    .character, .message {
+      width: 100%;
+    }
+    
+    .character-image {
+      width: 12rem;
+      height: 12rem;
+    }
+    
+    .features {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Logo Styling */
+.logoimg {
+    width: 280px;
+    height: auto;
+    margin: 0 auto; /* This centers the image horizontally */
+    display: block; /* Changed from flex to block for proper centering */
+    animation: logo-entrance 1.2s ease-out forwards;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+  
+.logoimg:hover {
+    transform: scale(1.05);
+}
+  
+@keyframes logo-entrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+/* For mobile devices */
+@media (max-width: 768px) {
+    .logoimg {
+        width: 140px;
+        margin-bottom: 1rem;
+    }
+}
