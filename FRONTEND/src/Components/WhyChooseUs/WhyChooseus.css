@@ -1,0 +1,224 @@
+.why-container {
+    background: linear-gradient(to bottom, #eff6ff, #e0e7ff);
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero-card {
+    background: linear-gradient(to right, #2563eb, #3730a3);
+    color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    width: 80%;
+    max-width: 960px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2.5rem;
+    text-align: center;
+    width: 100%;
+    color: #3730a3;
+  }
+  
+  .scroll-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .features-wrapper {
+    padding: 5rem 1.5rem;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1e1b4b;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    transform: scale(1);
+  }
+  
+  .feature-card:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    transform: scale(1.05) rotate(-1deg);
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    color: #4f46e5;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #3730a3;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-desc {
+    color: #4b5563;
+    text-align: center;
+  }
+  
+  .testimonial-section {
+    padding: 5rem 0;
+    background-color: #312e81;
+    color: white;
+  }
+  
+  .testimonial-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #3730a3;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .testimonial-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.25rem;
+    width: 100%;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+  }
+  
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .testimonial-avatar {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 9999px;
+    background: linear-gradient(to right, #93c5fd, #818cf8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .testimonial-text {
+    font-size: 1.125rem;
+    font-style: italic;
+  }
+  
+  .testimonial-author {
+    margin-top: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .cta-wrapper {
+    padding: 5rem 1.5rem;
+  }
+  
+  .cta-box {
+    max-width: 768px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #1e1b4b;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #4b5563;
+  }
+  
+  .cta-button {
+    background-color: #4f46e5;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+  }
+  
+  .footer {
+    background-color: #1e1b4b;
+    color: #c7d2fe;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  

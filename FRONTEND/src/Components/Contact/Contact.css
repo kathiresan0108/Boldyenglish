@@ -1,0 +1,572 @@
+/* ContactPage.css */
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+  }
+  
+  .contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 600;
+    color: #1a365d;
+  }
+  
+  /* Header */
+  .contact-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2b6cb0;
+  }
+  
+  .contact-header p {
+    font-size: 1.1rem;
+    color: #4a5568;
+  }
+  
+  /* Locations Section */
+  .locations-section {
+    margin-bottom: 60px;
+  }
+  
+  .locations-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .location-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .location-tab {
+    padding: 10px 20px;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .location-tab.active {
+    background-color: #3182ce;
+    color: white;
+  }
+  
+  .location-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  .location-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .location-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #4a5568;
+  }
+  
+  .location-info p svg {
+    margin-right: 10px;
+    color: #3182ce;
+    flex-shrink: 0;
+  }
+  
+  .location-map {
+    flex: 1;
+    min-width: 300px;
+    height: 250px;
+  }
+  
+  .map-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #edf2f7;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+  }
+  
+  .map-placeholder svg {
+    color: #3182ce;
+    margin-bottom: 10px;
+  }
+  
+  /* QR Section */
+  .qr-sectionss {
+    background-color: #edf2f7;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+  }
+  
+  .qr-containerss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .qr-infoss {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .qr-infoss h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2b6cb0;
+  }
+  
+  .qr-infoss p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #4a5568;
+  }
+  
+  .benefitsss {
+    margin-top: 30px;
+  }
+  
+  .benefit-itemss {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .benefit-itemss span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #3182ce;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+  
+  .qr-codess {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .qr-codess img {
+    width: 200px;
+    height: 200px;
+    border: 10px solid white;
+    border-radius: 8px;
+  }
+  
+  .qr-codess p {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2b6cb0;
+  }
+  
+  /* Upcoming Events Section */
+  .upcoming-events-section {
+    margin-bottom: 60px;
+  }
+  
+  .upcoming-events-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .event-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 380px;
+    transition: transform 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event-icon {
+    background-color: #ebf8ff;
+    color: #3182ce;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .event-details {
+    flex: 1;
+  }
+  
+  .event-details h3 {
+    margin-bottom: 8px;
+    color: #2b6cb0;
+    font-size: 1.2rem;
+  }
+  
+  .event-date, .event-location {
+    color: #4a5568;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+  }
+  
+  .register-btn {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .register-btn:hover {
+    background-color: #2b6cb0;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-bottom: 60px;
+  }
+  
+  .faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .faq-question {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+  
+  .faq-question h3 {
+    margin: 0 15px;
+    flex: 1;
+    font-size: 1.1rem;
+  }
+  
+  .faq-question span {
+    color: #3182ce;
+    flex-shrink: 0;
+  }
+  
+  .faq-question.active {
+    background-color: #ebf8ff;
+    border-bottom: 1px solid #bee3f8;
+  }
+  
+  .faq-answer {
+    padding: 0 20px 20px;
+    color: #4a5568;
+  }
+  
+  /* Footer */
+  .contact-footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 8px;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-item svg {
+    margin-right: 10px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4a5568;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    background-color: #3182ce;
+  }
+  
+  .copyright {
+    text-align: center;
+    color: #a0aec0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contact-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .qr-infoss h2, .upcoming-events-section h2, .faq-section h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-header h1 {
+      font-size: 2rem;
+    }
+    
+    .contact-header p {
+      font-size: 1rem;
+    }
+    
+    .qr-containerss {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .benefitsss {
+      max-width: 400px;
+      margin: 30px auto 0;
+    }
+    
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .location-details {
+      flex-direction: column;
+    }
+    
+    .location-map {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .contact-header {
+      padding: 30px 15px;
+    }
+    
+    .contact-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .qr-sectionss, .locations-section, .upcoming-events-section, .faq-section {
+      margin-bottom: 40px;
+    }
+    
+    .qr-infoss h2, .locations-section h2, .upcoming-events-section h2, .faq-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    
+    .qr-codess img {
+      width: 180px;
+      height: 180px;
+      border-width: 8px;
+    }
+    
+    .faq-question h3 {
+      font-size: 1rem;
+    }
+    
+    .location-tab {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .contact-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .qr-codess img {
+      width: 150px;
+      height: 150px;
+      border-width: 6px;
+    }
+    
+    .benefit-itemss {
+      font-size: 0.9rem;
+    }
+    
+    .location-info p {
+      font-size: 0.9rem;
+    }
+  }
+
+  /* Add these styles to Contact.css */
+
+/* Map and Image Styling */
+.location-map {
+    flex: 1;
+    min-width: 300px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .location-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #edf2f7;
+  }
+  
+  .location-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .location-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* View Toggle Buttons */
+  .view-toggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .view-toggle-btn {
+    padding: 8px 16px;
+    background-color: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .view-toggle-btn.active {
+    background-color: #3182ce;
+    color: white;
+  }
+  
+  /* Fix for the broken email */
+  .location-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #4a5568;
+    word-break: break-word;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .location-map {
+      height: 220px;
+    }
+    
+    .view-toggle {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .location-map {
+      height: 200px;
+    }
+    
+    .view-toggle-btn {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+    }
+  }

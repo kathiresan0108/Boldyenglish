@@ -1,0 +1,39 @@
+.parallax-body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .parallax-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: 5vh 5vw; /* Top, Bottom, Left, Right space */
+    box-sizing: border-box;
+  }
+  
+  .parallax-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain; /* fit the image inside the box */
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  .image-1 {
+    background-image: url('../Assets/1.png');
+  }
+  .image-2 {
+    background-image: url('../Assets/2.png');
+  }
+  .image-3 {
+    background-image: url('../Assets/3.png');
+  }
+  

@@ -1,0 +1,312 @@
+/* Footer.css */
+.footer {
+    background-color: #ffffff;
+    color: #041c6c;
+    width: 100%;
+    padding: 3rem 0 1rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+    max-width: 2786px;
+    margin: 0 auto;
+    
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-logo-section {
+    flex: 1 1 300px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-logo img {
+    max-width: 200px;
+    height: auto;
+  }
+  
+  .tagline {
+    color: #041c6c;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .footer-description {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-nav-section,
+  .footer-courses-section,
+  .footer-contact-section {
+    flex: 1 1 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer h3 {
+    color: #041c6c;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    position: relative;
+  }
+  
+  .footer h3:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    /* background-color: #cc042c; */
+    margin-top: 8px;
+  }
+  
+  .footer-nav,
+  .footer-courses {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav li,
+  .footer-courses li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .footer-nav a,
+  .footer-courses a {
+    color: #041c6c;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .footer-nav a:before,
+  .footer-courses a:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #cc042c;
+    transition: width 0.3s ease;
+  }
+  
+  .footer-nav a:hover:before,
+  .footer-courses a:hover:before,
+  .footer-nav a.hovered:before,
+  .footer-courses a.hovered:before {
+    width: 100%;
+  }
+  
+  .footer-nav a:hover,
+  .footer-courses a:hover,
+  .footer-nav a.hovered,
+  .footer-courses a.hovered {
+    color: #cc042c;
+    transform: translateX(5px);
+  }
+  
+  .contact-info {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-icon {
+    color: #cc042c;
+    margin-right: 10px;
+  }
+  
+  .contact-item a,
+  .contact-item span {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-item a:hover {
+    color: #cc042c;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #041c6c;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: #cc042c;
+    transform: translateY(-3px);
+  }
+  
+  .whatsapp-buttonss {
+    margin-top: 1rem;
+  }
+  
+  .whatsapp-linkss {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .whatsapp-linkss:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 0;
+  }
+  
+  .footer-bottom p {
+    color: #555;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    color: #041c6c;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #cc042c;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footer-logo-section,
+  .footer-nav-section,
+  .footer-courses-section,
+  .footer-contact-section {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .footer-nav-section {
+    animation-delay: 0.2s;
+  }
+  
+  .footer-courses-section {
+    animation-delay: 0.4s;
+  }
+  
+  .footer-contact-section {
+    animation-delay: 0.6s;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    .footer-container {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+    }
+    
+    .footer-logo-section,
+    .footer-nav-section,
+    .footer-courses-section,
+    .footer-contact-section {
+      flex: 1 1 100%;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-links {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 2rem 0 1rem;
+    }
+    
+    .footer-container,
+    .footer-bottom {
+      padding: 0 1rem;
+    }
+    
+    .footer-social {
+      justify-content: center;
+    }
+    
+    .whatsapp-buttonss {
+      text-align: center;
+    }
+  }

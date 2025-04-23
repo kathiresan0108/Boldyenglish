@@ -1,0 +1,363 @@
+/* TiqmoHomepage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background-color: #f8f8f8;
+}
+
+.tiqmo-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 50px 20px;
+  min-height: 80vh;
+}
+
+.content-wrapper {
+  text-align: center;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #222;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-title.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition-delay: 0.3s;
+}
+
+.subtitle.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* App Display */
+.app-display {
+  position: relative;
+  margin-top: 40px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+  transition-delay: 0.6s;
+}
+
+.app-display.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.app-display img {
+  max-width: 100%;
+  height: auto;
+  max-height: 600px;
+}
+
+/* Floating Bubbles */
+.bubbles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation-name: float;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.bubble img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble-1 {
+  width: 100px;
+  height: 100px;
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bubble-2 {
+  width: 80px;
+  height: 80px;
+  top: 25%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.bubble-3 {
+  width: 120px;
+  height: 120px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.bubble-4 {
+  width: 90px;
+  height: 90px;
+  bottom: 30%;
+  right: 5%;
+  animation-delay: 3s;
+}
+
+.bubble-5 {
+  width: 110px;
+  height: 110px;
+  top: 50%;
+  right: 25%;
+  animation-delay: 2.5s;
+}
+
+.bubble-6 {
+  width: 70px;
+  height: 70px;
+  top: 40%;
+  left: 5%;
+  animation-delay: 1.5s;
+}
+
+.bubble-7 {
+  width: 110px;
+  height: 110px;
+  bottom: 40%;
+  left: 30%;
+  animation-delay: 4s;
+}
+
+.bubble-8 {
+  width: 90px;
+  height: 90px;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 3.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(10deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(15deg);
+  }
+  50% {
+    transform: translateY(0) rotate(10deg);
+  }
+  75% {
+    transform: translateY(15px) rotate(-15deg);
+  }
+  100% {
+    transform: translateY(0) rotate(10deg);
+  }
+}
+
+/* Download Section */
+.download-section {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 3;
+}
+
+.qr-code img {
+  width: 80px;
+  height: 80px;
+}
+
+.download-info {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  animation: fadeInUp 1s ease 2s forwards;
+  opacity: 0;
+}
+
+.scroll-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite;
+}
+
+.scroll-text {
+  display: flex;
+  color: #222;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.scroll-text span {
+  animation: fadeInRotate 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(10px) rotate(10deg);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInRotate {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Apply sequential delay to scroll text letters */
+.scroll-text span:nth-child(1) { animation-delay: 2.1s; }
+.scroll-text span:nth-child(2) { animation-delay: 2.2s; }
+.scroll-text span:nth-child(3) { animation-delay: 2.3s; }
+.scroll-text span:nth-child(4) { animation-delay: 2.4s; }
+.scroll-text span:nth-child(5) { animation-delay: 2.5s; }
+.scroll-text span:nth-child(6) { animation-delay: 2.6s; }
+.scroll-text span:nth-child(7) { animation-delay: 2.7s; }
+.scroll-text span:nth-child(8) { animation-delay: 2.8s; }
+.scroll-text span:nth-child(9) { animation-delay: 2.9s; }
+.scroll-text span:nth-child(10) { animation-delay: 3.0s; }
+.scroll-text span:nth-child(11) { animation-delay: 3.1s; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main-title {
+    font-size: 3rem;
+  }
+  
+  .bubble-1, .bubble-4, .bubble-6 {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  
+  .main-title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .app-display img {
+    max-height: 400px;
+  }
+  
+  .download-section {
+    bottom: 30px;
+    right: 20px;
+  }
+  
+  .bubble-2, .bubble-5, .bubble-7 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  
+  .app-display img {
+    max-height: 300px;
+  }
+  
+  .bubble-3, .bubble-8 {
+    display: none;
+  }
+  
+  .download-section {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .download-info {
+    font-size: 12px;
+  }
+}
